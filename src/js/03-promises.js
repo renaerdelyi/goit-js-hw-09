@@ -2,8 +2,8 @@ import Notiflix from "notiflix";
 
 function createPromise(position, delay) {
  return new Promise((resolve, reject) => {
-  setTimeout(() => {
-const shouldResolve = Math.random() > 0.3;
+  const shouldResolve = Math.random() > 0.3;
+setTimeout(() => {
   if (shouldResolve) {
     resolve({position,delay})
   } else {
@@ -26,10 +26,10 @@ for(let i = 0 ; i < amount; i++){
   const currentDelay = delay + i * step ;
   createPromise(i + 1, currentDelay)
   .then(value => {
-    Notiflix.Notify.success(`✅ Fulfilled promise ${value.position} in ${value.delay}ms`);
+    console.log(`✅ Fulfilled promise ${value.position} in ${value.delay}ms`);
   })
   .catch(error => {
-     Notiflix.Notify.failure(`❌ Rejected promise ${error.position} in ${error.delay}ms`);
+     console.log(`❌ Rejected promise ${error.position} in ${error.delay}ms`);
   });
 }
 });

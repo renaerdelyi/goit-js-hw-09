@@ -16,3 +16,17 @@ img {
   display: block;
   max-width: 100%;
 }
+#datetime-picker {
+  border-color: green;
+  background-color: yellow;
+}
+button {
+  border-color: green;
+  background-color: yellow;
+  font-family: 'Times New Roman', Times, serif;
+}
+.timer {
+  display: flex;
+  gap: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
